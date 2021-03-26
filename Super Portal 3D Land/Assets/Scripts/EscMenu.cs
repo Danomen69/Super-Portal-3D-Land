@@ -5,12 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class EscMenu : MonoBehaviour
 {
-    
+   public GameObject canvas;
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            SceneManager.LoadScene(3);
+            canvas.SetActive(true);
+            
+
         }
+        else if (Input.GetButtonUp("Cancel"))
+        {
+           canvas.SetActive(false);
+        }
+            
+            
+
+
+
     }
 }
